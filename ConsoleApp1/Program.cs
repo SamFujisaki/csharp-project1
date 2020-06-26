@@ -23,7 +23,7 @@ namespace ConsoleApp1
 
             //Array.Sort(numArray);
             // TODO: sort array without using the library function
-            for (int counter = 0; counter < numArray.Length - 1; counter++)
+            /*for (int counter = 0; counter < numArray.Length - 1; counter++)
             {
                 if (numArray[counter] < numArray[counter + 1])
                 {
@@ -32,10 +32,21 @@ namespace ConsoleApp1
                 {
                     // TODO: https://discordapp.com/channels/526544713193619467/668269769446653972/725814558094262273
                     //Console.WriteLine($"{numArray[counter]} is smaller than {numArray[counter + 1]}");
-                    int temp = 0;
-                    temp = numArray[counter];
-                    numArray[counter] = numArray[counter + 1];
-                    numArray[counter + 1] = temp;
+                    int[] temp = new int[3];
+                    temp[0] = numArray[counter];
+                    temp[1] = numArray[counter + 1];
+                    temp[2] = temp[0];
+                    temp[0] = temp[1];
+                    temp[1] = temp[2];
+                    numArray[counter] = temp[0];
+                    numArray[counter + 1] = temp[1];
+                }
+            }*/
+            for (int counter = 0; counter < numArray.Length - 1; counter++)
+            {
+                if (numArray[counter] > numArray[counter + 1])
+                {
+                    
                 }
             }
 
