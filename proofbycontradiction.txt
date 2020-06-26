@@ -1,3 +1,0 @@
-=== Prove by contradiction that the array is sorted ===
-Let r be the array, with x in r[x] being an element in r
-Suppose that r is not sorted

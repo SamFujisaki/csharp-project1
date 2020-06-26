@@ -17,36 +17,19 @@ namespace ConsoleApp1
 
             for (int counter = 0; counter < numArray.Length; counter++)
             {
-                //numArray.SetValue(Convert.ToInt32(random.Next()), counter);
                 numArray[counter] = random.Next();
             }
 
-            //Array.Sort(numArray);
-            // TODO: sort array without using the library function
-            /*for (int counter = 0; counter < numArray.Length - 1; counter++)
-            {
-                if (numArray[counter] < numArray[counter + 1])
-                {
-                }
-                else if (numArray[counter] > numArray[counter + 1])
-                {
-                    // TODO: https://discordapp.com/channels/526544713193619467/668269769446653972/725814558094262273
-                    //Console.WriteLine($"{numArray[counter]} is smaller than {numArray[counter + 1]}");
-                    int[] temp = new int[3];
-                    temp[0] = numArray[counter];
-                    temp[1] = numArray[counter + 1];
-                    temp[2] = temp[0];
-                    temp[0] = temp[1];
-                    temp[1] = temp[2];
-                    numArray[counter] = temp[0];
-                    numArray[counter + 1] = temp[1];
-                }
-            }*/
             for (int counter = 0; counter < numArray.Length - 1; counter++)
             {
-                if (numArray[counter] > numArray[counter + 1])
+                for (int i = counter + 1; i < numArray.Length; i++)
                 {
-                    
+                    if (numArray[counter] > numArray[i])
+                    {
+                        int temp = numArray[counter];
+                        numArray[counter] = numArray[i];
+                        numArray[i] = temp;
+                    }
                 }
             }
 
